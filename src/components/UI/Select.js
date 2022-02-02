@@ -36,7 +36,7 @@ const Select = (props) => {
                     {...props.select}
                     required
                 >
-                    <option value="" disabled defaultValue> {props.placeholder}</option>
+                    <option value="" disabled selected> {props.placeholder}</option>
                     <option value='Patient 1'>Patient 1</option>
                     <option value='Patient 2'>Patient 2</option>
                     <option value='Patient 3'>Patient 3</option>
