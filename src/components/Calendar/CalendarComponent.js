@@ -5,9 +5,11 @@ import parseISO from 'date-fns/parseISO';
 import startOfWeek from 'date-fns/startOfWeek';
 import getDay from 'date-fns/getDay';
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import CalendarToolbar from "./CalendarToolbar";
 import Context from "../../context/context";
+import './../../big-calendar-style.css'
+
 
 
 const locales = {
@@ -23,24 +25,41 @@ const localizer = dateFnsLocalizer({
 });
 
 const customStyle = {
-    height: '100vh',
+    height: 'calc(100vh - 136px)',
+    '.rbc-timeslot-group': {
+        minHeight:'70px'
+    }
+
 };
+
 
 
 const CalendarComponent = () => {
 
+
     const context = useContext(Context);
-    const {allEvents, view, onNavigateView} = context;
+    const {allEvents, view, onNavigateView, date, onNavigateDate} = context;
+
+    const formats = {
+        weekdayFormat:'EEEE',
+        dayFormat: (date, culture, localizer) => localizer.format(date, 'dd  EEEE', culture),
+    }
+
+
+
 
     return (
         <div className={styles.container}>
             <Calendar
+                date={date}
+                onNavigate={onNavigateDate}
                 localizer={localizer}
                 events={allEvents}
                 onView={onNavigateView}
                 view={view}
                 startAccessor="start"
                 endAccesor="end"
+                formats={formats}
                 style={customStyle}
                 components={{
                     toolbar: CalendarToolbar,

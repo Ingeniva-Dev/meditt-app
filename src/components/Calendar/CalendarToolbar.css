@@ -7,10 +7,10 @@
 
 .date-ul {
     list-style: none;
-    display: flex !important;
+    display: flex ;
     grid-template-columns: repeat(3, max-content);
     grid-gap: 49px;
-    background-color: rgba(33, 33, 33, 0.06);
+    background-color: rgb(226, 225, 225);
     padding: 0 46px;
     max-width: 394px;
     border-radius: 34px;
@@ -64,29 +64,44 @@
     background-color: white;
     max-width: 360px;
     width: 100%;
-    padding: 22px 12px 25px;
+    padding: 0 12px 25px;
     border-radius: 8px;
-
+    max-height: 393px;
 }
 
-.weeks .nice-dates-day:before {
+.weeks .nice-dates-day:after {
+    border: none;
+}
+
+.nice-dates-day.-selected:before {
+    opacity: 1;
     background-color: rgba(212, 74, 135, 1);
     z-index: 1;
 }
 
-.nice-dates-day. -selected:before {
-    opacity: 1 !important;
-    background-color: rgba(212, 74, 135, 1);
-    z-index: 3;
+.weeks .nice-dates-day.-selected:hover {
+    color: white;
+}
+
+.weeks .nice-dates-day_month {
+    color: unset;
+}
+
+.weeks .nice-dates-day.-selected:hover:after {
+    background-color: inherit;
 }
 
 .weeks .nice-dates-day {
     font-size: 16px;
     color: rgba(33, 33, 33, 1);
     font-family: RobotoRegular, sans-serif;
+    line-height: 24px;
+    max-height: 48px;
 }
 
 .weeks .nice-dates-week-header {
+    margin-top: 8px;
+    padding: 0;
     box-shadow: none;
 }
 
@@ -94,6 +109,7 @@
     font-size: 16px;
     color: rgba(33, 33, 33, 1);
     font-family: RobotoRegular, sans-serif;
+    line-height: 16px;
 }
 
 .weeks .nice-dates-navigation_current {
@@ -101,12 +117,16 @@
     font-family: HelveticaBold, sans-serif;
     font-size: 14px;
     line-height: 16px;
+    padding: 20px 0;
 
 }
 
 .weeks .nice-dates-navigation_previous:before, .weeks .nice-dates-navigation_next:before {
     width: 7px;
     height: 7px;
+    top: 20px;
+    margin-top: 0;
+    margin-left: -3px;
 }
 
 .right-side {
@@ -139,15 +159,10 @@
     justify-content: center;
     box-shadow: 0 0 6px 0 rgba(33, 33, 33, 0.05);
     cursor: pointer;
-
 }
 
 .plus > img {
     max-width: 14px;
-}
-
-.container ul {
-    display: none;
 }
 
 .backdrop {

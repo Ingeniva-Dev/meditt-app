@@ -18,7 +18,7 @@ const Select = (props) => {
     const datePiker = <DatePicker date={date} onDateChange={changeHandler} locale={enGB}>
         {({inputProps, focused}) =>  (
             <Input
-                className={'input' + (focused ? ' -focused' : '')}
+                className={'input' + (focused ? ' ' : '')}
                 input={{
                     ...inputProps,
                     placeholder:'Select Date'

@@ -1,6 +1,8 @@
 import React, {useReducer} from "react";
 import Context from "./context";
 
+
+
 const events=[
         {
             end: new Date('2022-02-01T21:45:00+0400'),
@@ -16,7 +18,8 @@ const events=[
 
 const defaultState = {
     allEvents:events,
-    view:'month',
+    view:'week',
+    date:new Date(),
 };
 
 const contextReducer = (state, action) => {
@@ -34,6 +37,24 @@ const contextReducer = (state, action) => {
             view:action.id,
         }
     }
+    if (action.type === 'DATE') {
+        if (action.text === 'PREVIOUS') {
+            return  {
+                ...state,
+                date:new Date(state.date.getFullYear(),state.date.getMonth(), state.date.getDate() - 7)
+            }
+        }
+        if (action.text === 'NEXT') {
+            return  {
+                ...state,
+                date:new Date(state.date.getFullYear(),state.date.getMonth(), state.date.getDate() + 7)
+            }
+        }
+        return {
+            ...state,
+            date:action.date
+        }
+    }
     return state;
 };
 
@@ -49,11 +70,17 @@ const ContextProvider = (props) => {
         dispatchContextAction({type:'VIEW',id})
     }
 
+    const onNavigateDateHandler = (date,text) => {
+        dispatchContextAction({type:'DATE', date, text});
+    }
+
     const contextValue = {
         allEvents: contextState.allEvents,
         addEventsToAll:addAllEventsHandler,
         view:contextState.view,
         onNavigateView:onNavigateViewHandler,
+        date:contextState.date,
+        onNavigateDate:onNavigateDateHandler,
     }
 
         return (

@@ -8,16 +8,21 @@ import Modal from "react-modal"
 import Booking from "../Modal/Booking";
 import {bookingStyle} from './../Modal/ModalStyles';
 import Context from "../../context/context";
-import { enGB } from 'date-fns/locale'
-import { DatePickerCalendar } from 'react-nice-dates'
+import {enGB} from 'date-fns/locale'
+import {Calendar, DatePicker} from 'react-nice-dates'
 import 'react-nice-dates/build/style.css'
+import getWeek from 'date-fns/getWeek'
 
-const CalendarToolbar = () => {
+
+
+const CalendarToolbar = (props) => {
 
     const [bookingIsOpen, setBookingIsOpen] = useState(false);
-    const [datePikerIsOpen, setDatePikerIsOpen] = useState(false);
+    const [calendarIsOpen, setCalendarIsOpen] = useState(false);
+    const [selectedDay, setSelectedDay] = useState();
+    const [selected, setSelected] = useState(new Date());
     const context = useContext(Context);
-    const {onNavigateView} = context;
+    const {onNavigateView, onNavigateDate, date} = context;
 
     const newBookingHandler = () => {
         setBookingIsOpen(prevBooking => !prevBooking);
@@ -27,41 +32,76 @@ const CalendarToolbar = () => {
         onNavigateView(event.target.id);
     };
 
-    const weekChangeHandler = () => {
-        setDatePikerIsOpen(prevDataPiker => !prevDataPiker);
+    const selectDayHandler = () => {
+        setCalendarIsOpen(prevDataPiker => !prevDataPiker);
     };
 
-    const [selectedDay, setSelectedDay] = useState();
-    const calendar = <> <span className='backdrop' onClick={weekChangeHandler}/>
-        <DatePickerCalendar Date={selectedDay} onDateChange={setSelectedDay} locale={enGB} /> </>;
+    const dayClickHandler = (value) => {
+        onNavigateDate(value);
+        setSelected(value)
+        setCalendarIsOpen(prevDataPiker => !prevDataPiker);
+    };
+
+    const nextWeekHandler = (date) => {
+        onNavigateDate(date,'NEXT' )
+    }
+
+    const previousWeekHandler = (date) => {
+        onNavigateDate(date, 'PREVIOUS')
+
+    }
+
+
+    const modifiers = {
+        selected: select => select.getDate() === selected.getDate() &&
+            select.getMonth() === selected.getMonth()
+    };
+
+    const modifiersClassNames = {
+        selected: '-selected',
+    };
+
+
+    const calendar = <>
+        <span className='backdrop' onClick={selectDayHandler}/>
+        <Calendar
+            date={selectedDay}
+            onDateChange={setSelectedDay}
+            locale={enGB}
+            weekdayFormat={"EEEEEE"}
+            onDayClick={dayClickHandler}
+            modifiers={modifiers}
+            modifiersClassNames={modifiersClassNames}
+        />
+    </>;
+
 
     return (
         <>
-        <div className={'container'}>
-            <div className={'left-side'}>
-                <ul className={'date-ul'}>
-                    <li id='day' onClick={dateHandler}>Daily</li>
-                    <li id='week' onClick={dateHandler}>Weekly</li>
-                    <li id='month' onClick={dateHandler}>Monthly</li>
-                </ul>
-                <div className={'weeks'}>
-                    <img src={arrowLeft} alt='Arrow left'/>
-                    <span onClick={weekChangeHandler}>Week 37</span>
-                    <img src={arrowRight} alt='Arrow right'/>
-                    {datePikerIsOpen && calendar}
+            <div className={'container'}>
+                <div className={'left-side'}>
+                    <ul className={'date-ul'}>
+                        <li id='day' onClick={dateHandler}>Daily</li>
+                        <li id='week' onClick={dateHandler}>Weekly</li>
+                        <li id='month' onClick={dateHandler}>Monthly</li>
+                    </ul>
+                    <div className={'weeks'}>
+                        <img src={arrowLeft} alt='Arrow left' onClick={previousWeekHandler}/>
+                        <span onClick={selectDayHandler}>Week {getWeek(date)}</span>
+                        <img src={arrowRight} alt='Arrow right' onClick={nextWeekHandler}/>
+                        {calendarIsOpen && calendar}
+                    </div>
                 </div>
-
+                <div className={'right-side'}>
+                    <div className={'schedule-change'}>
+                        <span>My Schedule</span>
+                        <img src={arrowDown} alt='Arrow down'/>
+                    </div>
+                    <div className={'plus'} onClick={newBookingHandler}>
+                        <img src={plusIcon} alt='Plus icon'/>
+                    </div>
+                </div>
             </div>
-            <div className={'right-side'}>
-                <div className={'schedule-change'}>
-                    <span>My Schedule</span>
-                    <img src={arrowDown} alt='Arrow down'/>
-                </div>
-                <div className={'plus'} onClick={newBookingHandler}>
-                    <img src={plusIcon} alt='Plus icon'/>
-                </div>
-            </div>
-        </div>
             <Modal
                 isOpen={bookingIsOpen}
                 onRequestClose={newBookingHandler}
@@ -70,7 +110,7 @@ const CalendarToolbar = () => {
             >
                 <Booking onClick={newBookingHandler}/>
             </Modal>
-            </>
+        </>
     );
 };
 
