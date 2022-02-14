@@ -6,7 +6,7 @@ const Button = (props) => {
         <button
             {...props}
             type={props.type || 'button'}
-            className={`${styles.button} && ${props.className}`}
+            className={props.className || styles.button}
         >
             {props.children}
         </button>
@@ -15,3 +15,4 @@ const Button = (props) => {
 }
 
 export default Button
+

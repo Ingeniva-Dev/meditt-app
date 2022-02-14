@@ -104,6 +104,7 @@ const Booking = (props) => {
                             maxLength:"5",
                             placeholder: '00:00',
                             onChange:fromValueChangeHandler,
+                            className:'booking-input'
                         }}
                     />
                     <Input
@@ -112,6 +113,7 @@ const Booking = (props) => {
                             maxLength:"5",
                             placeholder: '00:00',
                             onChange:toValueChangeHandler,
+                            className:'booking-input'
                         }}
                     />
                 </div>
@@ -119,7 +121,7 @@ const Booking = (props) => {
                     <Button className={styles['button-cancel']} onClick={props.onClick}>
                         Cancel
                     </Button>
-                    <Button type='submit' className={styles['button-add']} disabled={!formIsValid}>
+                    <Button type='submit' disabled={!formIsValid}>
                         Add Booking
                     </Button>
                 </div>

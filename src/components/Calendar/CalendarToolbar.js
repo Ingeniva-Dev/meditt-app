@@ -12,6 +12,8 @@ import {enGB} from 'date-fns/locale'
 import {Calendar, DatePicker} from 'react-nice-dates'
 import 'react-nice-dates/build/style.css'
 import getWeek from 'date-fns/getWeek'
+import { toolbarLi } from "../DummyData/DummData";
+import Ul from "../UI/Ul";
 
 
 
@@ -21,6 +23,8 @@ const CalendarToolbar = (props) => {
     const [calendarIsOpen, setCalendarIsOpen] = useState(false);
     const [selectedDay, setSelectedDay] = useState();
     const [selected, setSelected] = useState(new Date());
+    const [active, setActive] = useState(1);
+
     const context = useContext(Context);
     const {onNavigateView, onNavigateDate, date} = context;
 
@@ -28,8 +32,9 @@ const CalendarToolbar = (props) => {
         setBookingIsOpen(prevBooking => !prevBooking);
     };
 
-    const dateHandler = (event) => {
-        onNavigateView(event.target.id);
+    const dateHandler = ({id, index}) => {
+        onNavigateView(id);
+        setActive(index)
     };
 
     const selectDayHandler = () => {
@@ -78,13 +83,16 @@ const CalendarToolbar = (props) => {
 
     return (
         <>
-            <div className={'container'}>
+            <div className={'toolbar-container'}>
                 <div className={'left-side'}>
-                    <ul className={'date-ul'}>
-                        <li id='day' onClick={dateHandler}>Daily</li>
-                        <li id='week' onClick={dateHandler}>Weekly</li>
-                        <li id='month' onClick={dateHandler}>Monthly</li>
-                    </ul>
+                    <Ul 
+                    li={toolbarLi}
+                    onClick={dateHandler}
+                    style={'date-ul'}
+                    liStyle={'date-li'}
+                    active={active}
+                    activeStyle={'active-toolbar'}
+                    />
                     <div className={'weeks'}>
                         <img src={arrowLeft} alt='Arrow left' onClick={previousWeekHandler}/>
                         <span onClick={selectDayHandler}>Week {getWeek(date)}</span>

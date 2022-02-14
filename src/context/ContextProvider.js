@@ -1,6 +1,6 @@
 import React, {useReducer} from "react";
 import Context from "./context";
-
+import {usersList} from "../components/DummyData/DummData";
 
 
 const events=[
@@ -20,6 +20,8 @@ const defaultState = {
     allEvents:events,
     view:'week',
     date:new Date(),
+    conversation:[],
+    usersListData:usersList,
 };
 
 const contextReducer = (state, action) => {
@@ -31,12 +33,14 @@ const contextReducer = (state, action) => {
             allEvents:updatedEvents,
         }
     }
+
     if (action.type === 'VIEW') {
         return {
             ...state,
             view:action.id,
         }
     }
+
     if (action.type === 'DATE') {
         if (action.text === 'PREVIOUS') {
             return  {
@@ -55,6 +59,24 @@ const contextReducer = (state, action) => {
             date:action.date
         }
     }
+
+    if(action.type === 'CONVERSATION') {
+        let selectedConversation;
+        for (const item of state.usersListData) {
+            if (item.conversation && action.id === item.id) {
+                 selectedConversation = [item.img, ...item.conversation];
+                 break;
+            }
+            else {
+                 selectedConversation = [];
+            }
+        }
+        return {
+            ...state,
+            conversation:selectedConversation,
+        }
+    }
+
     return state;
 };
 
@@ -74,6 +96,14 @@ const ContextProvider = (props) => {
         dispatchContextAction({type:'DATE', date, text});
     }
 
+    const selectedConversationHandler = (id) => {
+        dispatchContextAction({type:'CONVERSATION', id})
+    }
+
+    const addMessageHandler = (id, message) => {
+        dispatchContextAction({type:'ADD_MESSAGE', id, message});
+    }
+
     const contextValue = {
         allEvents: contextState.allEvents,
         addEventsToAll:addAllEventsHandler,
@@ -81,6 +111,11 @@ const ContextProvider = (props) => {
         onNavigateView:onNavigateViewHandler,
         date:contextState.date,
         onNavigateDate:onNavigateDateHandler,
+        conversation:contextState.conversation,
+        conversationHandler:selectedConversationHandler,
+        addMessage:addMessageHandler,
+
+
     }
 
         return (

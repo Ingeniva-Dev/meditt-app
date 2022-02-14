@@ -1,4 +1,4 @@
-.container {
+.toolbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,10 +14,11 @@
     padding: 0 46px;
     max-width: 394px;
     border-radius: 34px;
+    margin: 0;
 
 }
 
-.container li {
+.date-li {
     font-family: HelveticaRegular, sans-serif;
     font-size: 14px;
     line-height: 16px;
@@ -26,7 +27,7 @@
     cursor: pointer;
 }
 
-.container li:nth-child(2) {
+.active-toolbar {
     background-color: rgba(255, 255, 255, 1);
     color: rgba(33, 33, 33, 1);
     box-shadow: 0 0 6px 0 rgba(33, 33, 33, 0.05);
@@ -36,7 +37,7 @@
 
 }
 
-.container img {
+.toolbar-container img {
     max-width: 8px;
 }
 

@@ -21,7 +21,8 @@ const Select = (props) => {
                 className={'input' + (focused ? ' ' : '')}
                 input={{
                     ...inputProps,
-                    placeholder:'Select Date'
+                    placeholder:'Select Date',
+                    className:'booking-input'
                 }}
             />
         )}

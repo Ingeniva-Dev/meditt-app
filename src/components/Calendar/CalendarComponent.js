@@ -49,24 +49,21 @@ const CalendarComponent = () => {
 
 
     return (
-        <div className={styles.container}>
-            <Calendar
-                date={date}
-                onNavigate={onNavigateDate}
-                localizer={localizer}
-                events={allEvents}
-                onView={onNavigateView}
-                view={view}
-                startAccessor="start"
-                endAccesor="end"
-                formats={formats}
-                style={customStyle}
-                components={{
-                    toolbar: CalendarToolbar,
-                }}
-            />
-
-        </div>
+        <Calendar
+            date={date}
+            onNavigate={onNavigateDate}
+            localizer={localizer}
+            events={allEvents}
+            onView={onNavigateView}
+            view={view}
+            startAccessor="start"
+            endAccesor="end"
+            formats={formats}
+            style={customStyle}
+            components={{
+                toolbar: CalendarToolbar,
+            }}
+        />
     );
 }
 

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: max-content;
     grid-gap: 8px;
+    position: relative;
 }
 
 .container label {
@@ -11,10 +12,9 @@
     color: rgba(33, 33, 33, 1);
 }
 
-.container input {
+input {
     border: 1px solid rgba(238, 237, 237, 1);
     border-radius: 8px;
-    padding: 13px 0 13px 14px;
     width: 100%;
 
 }

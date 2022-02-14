@@ -1,4 +1,4 @@
-.button {
+button {
     cursor: pointer;
     border: none;
     white-space: nowrap;
@@ -12,16 +12,33 @@
 
 }
 
-.button:focus {
+button:focus {
     outline: none;
 }
 
-button:disabled,
-button:disabled:hover,
-button:disabled:active {
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:active {
     background-color: rgba(212, 74, 135, 0.5);;
     cursor: not-allowed;
 }
 
+.button {
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 33px;
+    border-radius: 36px;
+    background-color: rgba(212, 74, 135, 1);
+    cursor: pointer;
+    font-family: HelveticaBold,sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+
+.button-add:hover,
+.button-add:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
 
 
