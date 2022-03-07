@@ -7,7 +7,7 @@ import Button from "../UI/Button";
 import useSelect from "../../hooks/use-select";
 import useInput from "../../hooks/use-input";
 import useValidation from "../../hooks/use-validation";
-
+import {locationSelect, practitionerSelect, patientSelect} from "../DummyData/DummData";
 
 const Booking = (props) => {
 
@@ -22,6 +22,11 @@ const Booking = (props) => {
         value: practitionerValue,
         isValid:practitionerIsValid,
         valueChangeHandler: practitionerChangeHandler
+    } = useSelect(isEmpty);
+    const {
+        value: locationValue,
+        isValid:LocationIsValid,
+        valueChangeHandler: locationChangeHandler
     } = useSelect(isEmpty);
     const {
         value: dateValue,
@@ -74,7 +79,8 @@ const Booking = (props) => {
                     title='Patient'
                     placeholder='Select Patient'
                     createNew='+ Create new patient'
-                    value={patientValue}
+                    optionData={patientSelect}
+                    // value={patientValue}
                     select={{
                         onChange: patientChangeHandler,
                         value: patientValue
@@ -83,9 +89,19 @@ const Booking = (props) => {
                 <Select
                     title='Practitioner'
                     placeholder='Select Practitioner'
+                    optionData={practitionerSelect}
                     select={{
                         onChange: practitionerChangeHandler,
                         value: practitionerValue
+                    }}
+                />
+                <Select
+                    title='Location'
+                    placeholder='Select Location'
+                    optionData={locationSelect}
+                    select={{
+                        onChange: locationChangeHandler,
+                        value: locationValue
                     }}
                 />
                 <Select
@@ -117,6 +133,11 @@ const Booking = (props) => {
                         }}
                     />
                 </div>
+                <div className={styles.comments}>
+                    <label htmlFor='comments'>Comment</label>
+                    <textarea id='comments' placeholder='Add Comment'/>
+                </div>
+
                 <div className={styles['buttons-container']}>
                     <Button className={styles['button-cancel']} onClick={props.onClick}>
                         Cancel

@@ -20,7 +20,6 @@
 .rbc-row > .rbc-header {
     padding: 24px 0;
     border-left: none;
-    word-spacing: 100vw;
     white-space: unset;
     font-family: HelveticaRegular,sans-serif;
     font-size: 18px;
@@ -42,3 +41,28 @@
     background-color: white;
     border: 1px solid rgb(238, 237, 237);
 }
+
+.rbc-day-slot .rbc-event-label {
+    white-space: pre-wrap;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .rbc-row > .rbc-header {
+        font-size: 12px;
+    }
+    .rbc-event-label {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .rbc-row > .rbc-header {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        word-spacing: unset;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+}
+

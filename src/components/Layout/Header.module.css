@@ -1,11 +1,11 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 24px;
-   
+
 }
 
 header > div {
+    padding: 15px 24px;
     display: flex;
     align-items: center;
 }
@@ -55,4 +55,30 @@ header input {
     display: flex;
     max-width: 10px;
 }
+.signUp-header-container {
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(238, 237, 237, 1);
+}
 
+.signUp-logo {
+    font-family: HelveticaNeueBold,sans-serif;
+    font-size: 48px;
+    line-height: 58px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.signUp-header-container > div > span {
+    margin-right: 63px;
+    display: inline-block;
+    font-family: HelveticaNeueBold, sans-serif;
+    font-size: 18px;
+    color: rgba(33, 33, 33, 1);
+    line-height: 22px;
+
+}
+
+.signUp-header-container  Button {
+    min-width: 154px;
+    font-family: HelveticaNeueBold, sans-serif;
+}

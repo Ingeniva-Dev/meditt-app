@@ -10,7 +10,7 @@
     color: rgba(33, 33, 33, 1);
     padding-bottom: 16px;
     margin-bottom: 24px;
-    border-bottom: 1px solid rgba(238, 237, 237, 1);
+
 }
 
 .container form {
@@ -24,17 +24,42 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-gap: 12px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(238, 237, 237, 1);
+
+}
+
+.comments > label {
+    font-family: HelveticaRegular, sans-serif;
+    color: rgba(33, 33, 33, 1);
+    font-size: 12px;
+
+}
+
+.comments > textarea {
+    border: 1px solid rgba(238, 237, 237, 1);
+    border-radius: 8px;
+    width: 100%;
+    min-height: 84px;
+    padding: 13px 14px;
+    resize: none;
+    margin-top: 8px;
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 14px;
+    color: rgba(33, 33, 33, 1);
+
+}
+
+.comments > textarea::placeholder {
+    color: rgba(33, 33, 33, 0.5);
 }
 
 .buttons-container {
+    border-top: 1px solid rgba(238, 237, 237, 1);
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-gap: 16px;
     justify-content: right;
+    padding-top: 24px;
 }
-
 
 
 .button-cancel {

@@ -1,5 +1,56 @@
 import userImg from './../../assets/Images/userImg.png';
 
+
+const locationSelect = [
+    {
+        text: 'Blue Room'
+
+    },
+    {
+        text: 'White Room'
+
+    },
+    {
+        text: 'Black Room'
+
+    },
+
+];
+
+const practitionerSelect = [
+    {
+        text:'Siri Madsen',
+    },
+    {
+        text:'Allison Herwitz',
+    },
+    {
+        text:'Cheyenne Dokidis',
+    },
+    {
+        text:'Ahmad Philips',
+    },
+
+];
+
+const patientSelect = [
+    {
+        text:'Jan Olav Heldal',
+    },
+    {
+        text:'Maren Schleifer',
+    },
+    {
+        text:'Jocelyn Septimus',
+    },
+    {
+        text:'Tiana Gouse',
+    },
+
+];
+
+
+
 const headerLi = [
     {
         text: 'Schedule',
@@ -35,11 +86,11 @@ const usersList = [
         id: '1',
         conversation: [
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
 
@@ -52,403 +103,403 @@ const usersList = [
         id: '2',
         conversation: [
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'OK'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur '
             },
         ],
@@ -460,22 +511,22 @@ const usersList = [
         id: '3',
         conversation: [
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
-            ],
+        ],
     },
     {
         name: 'Kjetil Geir Sundby',
@@ -490,19 +541,19 @@ const usersList = [
         id: '5',
         conversation: [
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
         ],
@@ -520,23 +571,23 @@ const usersList = [
         id: '7',
         conversation: [
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
             {
-                patient:false,
+                patient: false,
                 text: 'OK'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit a adipiscing elit.'
             },
             {
-                patient:false,
+                patient: false,
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.amet, consectetur adipiscing elit. Etiam vitae id a sem morbi adipiscing elit.'
             },
             {
-                patient:true,
+                patient: true,
                 text: 'Lorem ipsum dolor sit '
             },
         ],
@@ -701,76 +752,76 @@ const usersList = [
 
 const patientsLIst = [
     {
-        name:'Jan Olav Hesdfsdfsdfldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Hesdfsdfsdfldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldafsdfsdl',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldafsdfsdl',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldafdsfsdl',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldafdsfsdl',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldal',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldal',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldalsdfsfsdf',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldalsdfsfsdf',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldalfdsfsd',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldalfdsfsd',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
     {
-        name:'Jan Olav Heldafdl',
-        birthDate:'September 19 1982',
-        phoneNumber:'+47 99 58 47 48',
-        email:'name.longname@email.com',
+        name: 'Jan Olav Heldafdl',
+        birthDate: 'September 19 1982',
+        phoneNumber: '+47 99 58 47 48',
+        email: 'name.longname@email.com',
     },
 
 ];
@@ -781,4 +832,7 @@ export {
     toolbarLi,
     usersList,
     patientsLIst,
+    locationSelect,
+    practitionerSelect,
+    patientSelect,
 }

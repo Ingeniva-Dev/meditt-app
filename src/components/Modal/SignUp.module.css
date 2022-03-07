@@ -1,0 +1,58 @@
+.container {
+width: 100%;
+}
+
+.signUp-title {
+    display: block;
+    font-family: HelveticaNeueMedium, sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    color: rgba(33, 33, 33, 1);
+    text-align: center;
+    margin-top: 69px;
+}
+.signUp-form {
+    max-width: 588px;
+    margin: 66px auto 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputs-container {
+    display: grid;
+    grid-gap: 38px;
+    margin-bottom: 61px;
+
+}
+
+.inputs-container  input {
+    padding: 13px 0 13px 14px;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 0;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.inputs-container label {
+    font-size: 24px;
+    font-family: HelveticaNeueBold, sans-serif;
+
+}
+
+.signUp-form > Button {
+    min-width: 275px;
+    margin: 0 auto;
+}
+
+.email-check {
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 218px;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    font-family: HelveticaNeueLight,sans-serif;
+
+}

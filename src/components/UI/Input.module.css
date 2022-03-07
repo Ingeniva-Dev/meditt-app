@@ -3,9 +3,10 @@
     grid-template-rows: max-content;
     grid-gap: 8px;
     position: relative;
+    width: 100%;
 }
 
-.container label {
+.label {
     font-family: HelveticaRegular,sans-serif;
     font-size: 12px;
     line-height: 13px;

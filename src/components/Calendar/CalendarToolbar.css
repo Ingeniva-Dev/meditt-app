@@ -7,9 +7,9 @@
 
 .date-ul {
     list-style: none;
-    display: flex ;
+    display: flex;
     grid-template-columns: repeat(3, max-content);
-    grid-gap: 49px;
+    grid-gap: 30px;
     background-color: rgb(226, 225, 225);
     padding: 0 46px;
     max-width: 394px;
@@ -54,6 +54,7 @@
     grid-template-columns: repeat(3, max-content);
     grid-gap: 16px;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
 
 }
@@ -177,3 +178,18 @@
     cursor: default;
 }
 
+@media screen and (max-width: 767px) {
+    .toolbar-container {
+        flex-direction: column;
+    }
+
+    .left-side {
+        grid-template-columns: unset;
+        grid-gap: 10px;
+    }
+
+    .right-side {
+        margin-top: 10px;
+    }
+
+}
