@@ -88,7 +88,7 @@ const Booking = (props) => {
                 />
                 <Select
                     title='Practitioner'
-                    placeholder='Select Practitioner'
+                        placeholder='Select Practitioner'
                     optionData={practitionerSelect}
                     select={{
                         onChange: practitionerChangeHandler,

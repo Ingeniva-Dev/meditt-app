@@ -1,8 +1,6 @@
 .container {
     background-color: rgba(238, 237, 237, 1);
     padding: 100px 20px;
-
-
 }
 
 .container > section {
@@ -13,6 +11,7 @@
     grid-gap: 20px;
     justify-content: space-between;
 }
+
 .left-side {
     background-color: #FFFFFF;
     padding: 100px 10px;
@@ -20,6 +19,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .left-side > form {
     max-width: 464px;
     width: 100%;
@@ -31,8 +31,8 @@
 
 }
 
-.title{
-    font-family: HelveticaBold,sans-serif;
+.title {
+    font-family: HelveticaBold, sans-serif;
     font-size: 36px;
     font-weight: 700;
     color: rgba(33, 33, 33, 1);
@@ -47,20 +47,22 @@
 
 }
 
-.left-side  Button {
+.left-side Button {
     min-width: 260px;
     margin-top: 22px;
 }
 
-.have-account  {
+.have-account {
     display: inline-block;
     margin-top: 35px;
-    font-family: HelveticaRegular,sans-serif;
+    font-family: HelveticaRegular, sans-serif;
     font-size: 16px;
     color: rgba(33, 33, 33, 1);
 }
+
 .have-account > span {
-    font-family: HelveticaBold,sans-serif;
+    font-family: HelveticaBold, sans-serif;
+    cursor: pointer;
 }
 
 .right-side {
@@ -73,7 +75,7 @@
 .right-side > p {
     margin-top: 24px;
     font-size: 24px;
-    font-family: HelveticaRegular,sans-serif;
+    font-family: HelveticaRegular, sans-serif;
     color: rgba(33, 33, 33, 1);
     text-align: center;
 }
@@ -88,4 +90,12 @@
     justify-content: center;
     border-radius: 8px;
     margin-top: 54px;
+}
+
+.sign-today {
+    color: rgba(33, 33, 33, 1);
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 16px;
 }
