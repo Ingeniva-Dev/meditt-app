@@ -2,3 +2,10 @@
     background-color: rgb(238, 237, 237);
     padding: 32px 24px 0;
 }
+
+@media screen and (max-width: 767px){
+    .container{
+       padding: 0;
+        background-color: #FFFFFF;
+    }
+}

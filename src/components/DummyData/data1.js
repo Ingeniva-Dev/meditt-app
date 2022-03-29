@@ -1,4 +1,5 @@
 import userImg from './../../assets/Images/userImg.png';
+import React from "react";
 
 
 const locationSelect = [
@@ -53,34 +54,52 @@ const patientSelect = [
 
 const headerLi = [
     {
-        text: 'Schedule',
+        title: 'Schedule',
     },
     {
-        text: 'Messages',
+        title: 'Messages',
     },
     {
-        text: 'Patients'
+        title: 'Patients'
+    }
+];
+
+export const mobileNav = [
+    {
+        title: 'Schedule',
+    },
+    {
+        title: 'Messages',
+    },
+    {
+        title: 'Patients'
+    },
+    {
+        title: 'Profile'
+    },
+    {
+        title: 'Search'
     }
 ];
 
 const toolbarLi = [
     {
-        text: 'Daily',
+        title: 'Daily',
         id: 'day',
     },
     {
-        text: 'Weekly',
+        title: 'Weekly',
         id: 'week',
     },
     {
-        text: 'Monthly',
+        title: 'Monthly',
         id: 'month',
     }
 ];
 
 const usersList = [
     {
-        name: 'Kjetil Geir Sundby',
+        name: 'Kjetil Geir ',
         img: userImg,
         lastMessage: 'You: Thanks!',
         id: '1',
@@ -505,7 +524,7 @@ const usersList = [
         ],
     },
     {
-        name: 'Kjetil Geir Sundby',
+        name: 'Sundby',
         img: userImg,
         lastMessage: 'You: Thanks!',
         id: '3',
@@ -535,7 +554,7 @@ const usersList = [
         id: '4',
     },
     {
-        name: 'Kjetil Geir Sundby',
+        name: 'Kjetil Geir',
         img: userImg,
         lastMessage: 'You: Thanks!',
         id: '5',
@@ -559,7 +578,7 @@ const usersList = [
         ],
     },
     {
-        name: 'Kjetil Geir Sundby',
+        name: 'Geir',
         img: userImg,
         lastMessage: 'You: Thanks!',
         id: '6',
@@ -826,6 +845,15 @@ const patientsLIst = [
 
 ];
 
+const usersCategories = [
+    {
+        title:'Colleagues',
+    },
+    {
+        title: 'Patients',
+    },
+];
+
 
 export {
     headerLi,
@@ -835,4 +863,5 @@ export {
     locationSelect,
     practitionerSelect,
     patientSelect,
+    usersCategories,
 }

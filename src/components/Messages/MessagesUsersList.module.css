@@ -1,5 +1,4 @@
 .container {
-    max-width: 256px;
     padding: 7px 34px 7px 8px;
     display: flex;
     margin-bottom: 18px;
@@ -34,4 +33,15 @@
     font-family: HelveticaRegular,sans-serif;
     font-size: 12px;
     line-height: 13.8px;
+}
+
+@media screen and (max-width: 767px){
+    .container {
+        padding: 16px 34px 16px 8px;
+        border-bottom: 1px solid rgba(227, 229, 232, 1);
+        margin-bottom: 0;
+    }
+    .active-style {
+       background-color: unset;
+    }
 }

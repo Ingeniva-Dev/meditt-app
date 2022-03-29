@@ -7,7 +7,7 @@
 
 .patients-info-categories {
     display: grid;
-    grid-template-columns: repeat(4, calc(25% - 7.5px)) ;
+    grid-template-columns: repeat(4, calc(25% - 7.5px));
     margin: 12px 0;
     font-family: HelveticaRegular, sans-serif;
     font-size: 14px;
@@ -15,7 +15,6 @@
     color: #838383;
     grid-gap: 10px;
     word-break: break-word;
-
 }
 
 .input-style {
@@ -40,5 +39,13 @@
 
 
     color: rgba(33, 33, 33, 1);
-    font-family: HelveticaBold,sans-serif;
+    font-family: HelveticaBold, sans-serif;
+}
+
+.mobile-container {
+    padding: 0 10px;
+}
+
+.mobile-container > div:last-child {
+    margin-top: 20px;
 }

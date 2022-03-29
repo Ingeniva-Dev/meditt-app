@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from "react";
+import React, {useReducer} from "react";
 
 const defaultState = {
     value: '',
@@ -45,9 +45,5 @@ const useInput = (validateValue, config) => {
     }
 
 }
-
-
-
-
 
 export default useInput

@@ -4,22 +4,23 @@ import Input from "../UI/Input";
 import Button from "../UI/Button";
 
 const Sign = () => {
-    const [signUp, setSignUp] = useState(true);
+
+    const [signUpIsOpen, setsignUpIsOpen] = useState(true);
 
 
-    const signUpChangeHandler = () => {
-        setSignUp(prevState => !prevState)
+    const signUpIsOpenChangeHandler = () => {
+        setsignUpIsOpen(prevState => !prevState)
     }
 
-    const signText = signUp ? <span className={styles['have-account']}>
+    const signText = signUpIsOpen ? <span className={styles['have-account']}>
                        Already registered?
-                        <span onClick={signUpChangeHandler}> Sign in</span>
+                        <span onClick={signUpIsOpenChangeHandler}> Sign in</span>
                     </span> : <span className={styles['have-account']}>
                         Don’t have an account?
-                        <span onClick={signUpChangeHandler}> Sign up</span>
+                        <span onClick={signUpIsOpenChangeHandler}> Sign up</span>
                     </span>;
 
-    const welcomeText = signUp ? <>
+    const welcomeText = signUpIsOpen ? <>
             <span className={styles.title}>WELCOME TO MEDITT*</span>
             <span className={styles['sign-today']}>Sign up today!</span>
         </> :
@@ -35,9 +36,7 @@ const Sign = () => {
                         <Input
                             label='Email'
                             input={{
-
                                 placeholder: 'Type email',
-                                // onChange:fromValueChangeHandler,
                             }}
                         />
                         <Input
@@ -46,13 +45,13 @@ const Sign = () => {
                                 placeholder: 'Type password',
                             }}
                         />
-                        {signUp && <Input
+                        {signUpIsOpen && <Input
                             label='Confirm Password'
                             input={{
                                 placeholder: 'Type to confirm password',
                             }}
                         />}
-                        <Button>{signUp ? 'SIGN UP' : 'SIGN IN'}</Button>
+                        <Button>{signUpIsOpen ? 'SIGN UP' : 'SIGN IN'}</Button>
                     </form>
                     {signText}
                 </div>

@@ -1,0 +1,26 @@
+
+.messages-user-container {
+    max-width: 276px;
+    border-right: 1px solid rgba(238, 237, 237, 1);
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    min-height: calc(100vh - 136px);
+    padding: 0 10px;
+}
+
+.user-list {
+    padding: 22px 0;
+}
+
+@media screen and (max-width: 767px) {
+
+    .messages-user-container {
+        max-width: 100%;
+    }
+
+}
+
+
+
+

@@ -3,27 +3,29 @@ import './CalendarToolbar.css';
 import arrowRight from './../../assets/Images/arrowRight.png';
 import arrowLeft from './../../assets/Images/arrowleft.png';
 import arrowDown from './../../assets/Images/arrowDown.png';
-import plusIcon from './../../assets/Images/plusIcon.png';
 import Modal from "react-modal"
 import Booking from "../Modal/Booking";
 import {bookingStyle} from './../Modal/ModalStyles';
 import Context from "../../context/context";
 import {enGB} from 'date-fns/locale'
-import {Calendar, DatePicker} from 'react-nice-dates'
+import {Calendar} from 'react-nice-dates'
 import 'react-nice-dates/build/style.css'
 import getWeek from 'date-fns/getWeek'
-import { toolbarLi } from "../DummyData/DummData";
+import {patientSelect, toolbarLi} from "../DummyData";
 import Ul from "../UI/Ul";
+import Select from "../UI/Select";
+import useViewport from "../../hooks/use-viewport";
+import PlusBtn from "../Common/PlusBtn";
 
 
-
-const CalendarToolbar = (props) => {
+const CalendarToolbar = () => {
 
     const [bookingIsOpen, setBookingIsOpen] = useState(false);
     const [calendarIsOpen, setCalendarIsOpen] = useState(false);
     const [selectedDay, setSelectedDay] = useState();
     const [selected, setSelected] = useState(new Date());
     const [active, setActive] = useState(1);
+    const {width} = useViewport();
 
     const context = useContext(Context);
     const {onNavigateView, onNavigateDate, date} = context;
@@ -48,14 +50,13 @@ const CalendarToolbar = (props) => {
     };
 
     const nextWeekHandler = (date) => {
-        onNavigateDate(date,'NEXT' )
-    }
+        onNavigateDate(date, 'NEXT')
+    };
 
     const previousWeekHandler = (date) => {
         onNavigateDate(date, 'PREVIOUS')
 
-    }
-
+    };
 
     const modifiers = {
         selected: select => select.getDate() === selected.getDate() &&
@@ -83,15 +84,24 @@ const CalendarToolbar = (props) => {
 
     return (
         <>
-            <div className={'toolbar-container'}>
+            {width < 768 && <div className={'mobile-view'}>
+                <Select
+                    placeholder='September'
+                    optionData={patientSelect}/>
+                <Select
+                    placeholder='My Schedule'
+                    optionData={patientSelect}/>
+                <PlusBtn onClick={newBookingHandler}/>
+            </div>}
+            {width > 767 && <div className={'toolbar-container'}>
                 <div className={'left-side'}>
-                    <Ul 
-                    li={toolbarLi}
-                    onClick={dateHandler}
-                    style={'date-ul'}
-                    liStyle={'date-li'}
-                    active={active}
-                    activeStyle={'active-toolbar'}
+                    <Ul
+                        li={toolbarLi}
+                        onClick={dateHandler}
+                        style={'date-ul'}
+                        liStyle={'date-li'}
+                        active={active}
+                        activeStyle={'active-toolbar'}
                     />
                     <div className={'weeks'}>
                         <img src={arrowLeft} alt='Arrow left' onClick={previousWeekHandler}/>
@@ -105,11 +115,9 @@ const CalendarToolbar = (props) => {
                         <span>My Schedule</span>
                         <img src={arrowDown} alt='Arrow down'/>
                     </div>
-                    <div className={'plus'} onClick={newBookingHandler}>
-                        <img src={plusIcon} alt='Plus icon'/>
-                    </div>
+                    <PlusBtn onClick={newBookingHandler}/>
                 </div>
-            </div>
+            </div>}
             <Modal
                 isOpen={bookingIsOpen}
                 onRequestClose={newBookingHandler}

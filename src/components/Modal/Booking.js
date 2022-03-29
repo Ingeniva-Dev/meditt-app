@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import Context from "../../context/context";
 import styles from './Booking.module.css';
 import Select from "../UI/Select";
@@ -7,7 +7,7 @@ import Button from "../UI/Button";
 import useSelect from "../../hooks/use-select";
 import useInput from "../../hooks/use-input";
 import useValidation from "../../hooks/use-validation";
-import {locationSelect, practitionerSelect, patientSelect} from "../DummyData/DummData";
+import {locationSelect, practitionerSelect, patientSelect} from "../DummyData";
 
 const Booking = (props) => {
 
@@ -67,6 +67,7 @@ const Booking = (props) => {
         const startTime = dateValue.getTime() + convertToMilliseconds(fromValue);
         const endTime = dateValue.getTime() + convertToMilliseconds(toValue);
         context.addEventsToAll({title:patientValue,start: new Date(startTime), end: new Date(endTime)});
+        props.onClick()
     };
 
     return (

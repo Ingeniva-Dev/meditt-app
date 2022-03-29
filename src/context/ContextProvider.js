@@ -1,6 +1,6 @@
 import React, {useReducer} from "react";
 import Context from "./context";
-import {usersList} from "../components/DummyData/DummData";
+import {usersList} from "../components/DummyData";
 
 
 const events=[
@@ -115,15 +115,12 @@ const ContextProvider = (props) => {
         conversationHandler:selectedConversationHandler,
         addMessage:addMessageHandler,
 
-
     }
-
         return (
             <Context.Provider value={contextValue}>
                 {props.children}
             </Context.Provider>
     );
-
 }
 
 export default ContextProvider

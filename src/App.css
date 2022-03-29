@@ -19,28 +19,16 @@
     font-family: HelveticaNeueBold;
     src: url("./assets/Fonts/Helvetica/Helvetica-Neue-Bold.ttf");
 }
+
 @font-face {
     font-family: HelveticaNeueMedium;
     src: url("./assets/Fonts/Helvetica/Helvetica-Neue-Medium.ttf");
 }
+
 @font-face {
     font-family: HelveticaNeueLight;
     src: url("./assets/Fonts/Helvetica/Helvetica-Neue-Light.ttf");
 }
-
-.activeHeader::after {
-    content: '';
-    position: absolute;
-    border-bottom: 3px solid #D44A87;
-    bottom: -26px;
-    left: 0;
-    width: 100%;
-}
-
-.booking-input {
-    padding: 13px 0 13px 14px;
-}
-
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -59,6 +47,9 @@
     background: #555;
 }
 
+.booking-input {
+    padding: 13px 0 13px 14px;
+}
 
 .search-icon-one {
     position: absolute;
@@ -77,3 +68,15 @@
     max-width: 276px;
 
 }
+
+.active-header::after {
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid #D44A87;
+    bottom: -26px;
+    left: 0;
+    width: 100%;
+}
+
+
+

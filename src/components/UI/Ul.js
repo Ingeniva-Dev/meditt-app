@@ -17,7 +17,7 @@ const Ul = (props) => {
                 onClick={() => {
                     props.onClick( {...item,index})
                 }}
-            >{item.text}
+            >{item.title}
             </li>
             )})}
         </ul>

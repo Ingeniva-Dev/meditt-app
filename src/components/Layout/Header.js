@@ -3,63 +3,67 @@ import styles from './Header.module.css';
 import searchIcon from './../../assets/Images/searchIcon.svg';
 import profilePicture from './../../assets/Images/profilePicture.png';
 import arrowDown from './../../assets/Images/arrowDown.png';
-import Ul from './../UI/Ul'
-import {headerLi} from "../DummyData/DummData";
-import {useHistory} from "react-router-dom";
+import menuIcon from './../../assets/Images/menuIcon.png';
 import Modal from 'react-modal';
 import {signUpStyle} from './../Modal/ModalStyles';
 import Sign from "../Modal/Sign";
+import Navigation from "../NavBar/Navigation";
+import MobileNavigation from "../NavBar/MobailNavigation";
 
 
 const Header = () => {
 
 
-    const [active, setActive] = useState(JSON.parse(localStorage.getItem('active')));
     const [signingIsOpen, setSigningIsOpen] = useState(false);
-
-    let history = useHistory();
-
-    const pageChangeHandler = ({index}) => {
-
-        if (index === 0) {
-            history.push("/");
-        } else if (index === 1) {
-            history.push('/messages');
-        } else if (index === 2) {
-            history.push('/patients');
-        }
-        setActive(index);
-        localStorage.setItem('active', index)
-    };
+    const [mobileNavBarIsOpen, setMobileNavBarIsOpen] = useState(false);
+    const [pageTitle, setPageTitle] = useState(JSON.parse(localStorage.getItem('page')) || 'Schedule');
 
     const signingChangeHandler = () => {
         setSigningIsOpen(prevState => !prevState)
-    }
+    };
 
+    const mobileNavBarChangeHandler = () => {
+        setMobileNavBarIsOpen(prevState => !prevState)
+    };
+
+    const titleChangeHandler = (val) => {
+        setPageTitle(val);
+        localStorage.setItem('page', JSON.stringify(val))
+    }
 
     return (
         <header>
-            <div>
-                <span className={styles['logo']} onClick={signingChangeHandler}>M*</span>
-                <Ul
-                    li={headerLi}
-                    onClick={pageChangeHandler}
-                    active={active}
-                    activeStyle={'activeHeader'}
-                />
-            </div>
-            <div>
-                <div className={styles['search-input']}>
-                    <input id='search-input' type="search" placeholder='Search'/>
-                    <label htmlFor='search-input'>
-                        <img src={searchIcon} alt='Search Icon' className={styles['search-icon']}/>
-                    </label>
+            {!mobileNavBarIsOpen && <div className={styles['mobile-view']}>
+                <span>{pageTitle}</span>
+                <img src={menuIcon} alt='menu' onClick={mobileNavBarChangeHandler}/>
+            </div>}
+
+            {mobileNavBarIsOpen && <MobileNavigation
+                closeHandler={mobileNavBarChangeHandler}
+                titleChangeHandler={titleChangeHandler}
+            />}
+            <div className={styles['full-view']}>
+                <div>
+                    <span className={styles['logo']} onClick={signingChangeHandler}>Meditt*</span>
+                    <div className={styles['border']}/>
+                    <div className={styles['search-input']}>
+                        <input id='search-input' type="search" placeholder='Search'/>
+                        <label htmlFor='search-input'>
+                            <img src={searchIcon} alt='Search Icon' className={styles['search-icon']}/>
+                        </label>
+                    </div>
                 </div>
-                <div className={styles['profile-picture']}>
-                    <img src={profilePicture} alt='Profile Picture'/>
-                </div>
-                <div className={styles['arrow-down']}>
-                    <img src={arrowDown} alt='Arrow Down'/>
+                <div>
+                    <Navigation/>
+                    <div className={styles['border']}/>
+                    <div className={styles['profile-picture-box']}>
+                        <div className={styles['profile-picture']}>
+                            <img src={profilePicture} alt='Profile Picture'/>
+                        </div>
+                        <div className={styles['arrow-down']}>
+                            <img src={arrowDown} alt='Arrow Down'/>
+                        </div>
+                    </div>
                 </div>
             </div>
             <Modal

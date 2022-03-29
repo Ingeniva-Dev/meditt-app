@@ -1,4 +1,3 @@
-
 const bookingStyle = {
     overlay: {
         background: "rgba(0, 0, 0, 0.3)",
@@ -17,9 +16,11 @@ const bookingStyle = {
         maxWidth: '383px',
         width: '100%',
         border: 'none',
-        overflow: 'hidden',
+        overflowY: 'auto',
+        overflowX: 'hidden',
         boxShadow: '0px 0px 10px 0px rgba(33, 33, 33, 0.05)',
-},
+        maxHeight: '98%',
+    },
 };
 
 const signUpStyle = {
@@ -44,9 +45,30 @@ const signUpStyle = {
     },
 };
 
+const messageStyle = {
+    overlay: {
+        background: "rgba(255, 255, 255, 1)",
+        zIndex: '10',
+    },
+    content: {
+        position: 'fixed',
+        left: '50%',
+        top: '50%',
+        transform: 'translate(-50%, -50%)',
+        zIndex: '5',
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        padding: '0',
+        minHeight: '100%',
+        width: '100%',
+        border: 'none',
+        overflow: 'hidden',
+    },
+};
+
 
 export {
     bookingStyle,
     signUpStyle,
+    messageStyle,
 
 }

@@ -34,7 +34,9 @@ const MessagesConversation = () => {
     });
 
     const conversationJSX = userConversation.length === 0 ?
-        <p className={styles['notification']}>No messages yet!</p> : userConversation
+        <p className={styles['notification']}>No messages yet!</p> : userConversation;
+
+
     return (
         <div className={styles.container}>
             {conversationJSX}

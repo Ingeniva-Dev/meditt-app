@@ -1,26 +1,41 @@
-header {
+
+.full-view {
     display: flex;
     justify-content: space-between;
-
 }
-
-header > div {
+.full-view > div{
     padding: 15px 24px;
     display: flex;
     align-items: center;
+    grid-gap: 24px;
 }
-
+.full-view > div:first-child {
+    padding-right: 0;
+}
+.full-view > div:last-child {
+    padding-left: 0;
+}
 .logo {
-    max-width: 30px;
-    margin-right: 24px;
     font-family: HelveticaRegular,sans-serif;
     font-size: 24px;
     line-height: 27px;
  }
 
+.border {
+    border-left: 1px solid rgba(238, 237, 237, 1);
+    height: 100%;
+}
+
 .search-input {
     position: relative;
     margin-right: 24px;
+
+}
+
+.profile-picture-box {
+    display: flex;
+    grid-gap: 19px;
+    align-items: center;
 }
 
 header input {
@@ -48,7 +63,6 @@ header input {
 .profile-picture {
     max-width: 42px;
     max-height: 42px;
-    margin-right: 19px;
 }
 
 .arrow-down {
@@ -81,4 +95,33 @@ header input {
 .signUp-header-container  Button {
     min-width: 154px;
     font-family: HelveticaNeueBold, sans-serif;
+}
+
+.mobile-view {
+    display: none;
+    position: relative;
+    padding: 22px;
+    justify-content: center;
+    font-family: HelveticaRegular,sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    color: rgba(33, 33, 33, 1);
+}
+
+.mobile-view > img {
+    max-width: 18px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px){
+    .mobile-view {
+        display: flex;
+    }
+    .full-view {
+        display: none;
+    }
+
 }

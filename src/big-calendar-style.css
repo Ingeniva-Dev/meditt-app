@@ -16,12 +16,20 @@
     border-top: 1px solid #ddd;
 }
 
+.rbc-calendar {
+    height: calc(100vh - 136px);
+}
+
+.rbc-timeslot-group {
+    min-height: 70px;
+}
+
 
 .rbc-row > .rbc-header {
     padding: 24px 0;
     border-left: none;
     white-space: unset;
-    font-family: HelveticaRegular,sans-serif;
+    font-family: HelveticaRegular, sans-serif;
     font-size: 18px;
     line-height: 20.7px;
     color: rgba(33, 33, 33, 1);
@@ -51,11 +59,25 @@
     .rbc-row > .rbc-header {
         font-size: 12px;
     }
+
     .rbc-event-label {
         font-size: 12px;
     }
+
+    .rbc-day-slot .rbc-events-container {
+        margin-right: 0;
+    }
+
+    .rbc-day-slot .rbc-event-content {
+        font-size: 12px;
+    }
+
+    .rbc-day-slot .rbc-event, .rbc-day-slot .rbc-background-event {
+        flex-flow: wrap;
+    }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
     .rbc-row > .rbc-header {
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -63,6 +85,24 @@
         padding: 10px 0;
         display: flex;
         align-items: center;
+    }
+
+    .rbc-event, .rbc-day-slot .rbc-background-event {
+        padding: 2px;
+    }
+
+    .rbc-event-label {
+        font-size: 9px;
+    }
+
+    .rbc-day-slot .rbc-event-content {
+        font-size: 9px;
+        margin-top: 2px;
+    }
+
+    .rbc-calendar {
+        height: 100%;
+
     }
 }
 

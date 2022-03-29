@@ -1,0 +1,66 @@
+.container {
+    padding: 24px 20px;
+}
+
+.container > div:first-child {
+    margin-top: 0;
+}
+
+.event {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 21px auto;
+}
+
+.week-day {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4px;
+
+}
+
+.space {
+    margin-top: 48px;
+}
+
+.week-day > span:first-child {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(33, 33, 33, 1);
+
+}
+
+.week-day > span:last-child {
+    font-family: HelveticaNeueLight, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(33, 33, 33, 0.5);
+}
+
+.event-box {
+    background-color: rgba(74, 113, 212, 1);
+    padding: 10px 12px;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+
+}
+
+.title {
+    font-family: HelveticaBold, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.time {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    color: rgba(255, 255, 255, 1);
+}

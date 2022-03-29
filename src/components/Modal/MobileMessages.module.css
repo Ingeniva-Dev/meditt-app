@@ -1,0 +1,44 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    max-height: 100vh;
+    height: 100%;
+}
+
+.top-container {
+    position: sticky;
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.top-container > span {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    color: rgba(33, 33, 33, 1);
+}
+
+.top-container > img {
+    max-width: 7px;
+    position: absolute;
+    left: 21px;
+    cursor: pointer;
+}
+
+.bottom-container {
+    max-height: calc(100vh - 50px);
+    overflow: auto;
+}
+
+.bottom-container > :first-child {
+    margin-top: auto !important;
+}
+

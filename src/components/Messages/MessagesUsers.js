@@ -1,61 +1,38 @@
 import React, {useState} from "react";
-import './MessagesUsers.css'
-import plusIcon from './../../assets/Images/plusIcon.png';
-import searchIcon from './../../assets/Images/searchIcon.svg';
-import {usersList} from './../DummyData/DummData';
-import Input from "../UI/Input";
+import styles from './MessagesUsers.module.css'
+import {usersList} from '../DummyData';
 import MessagesUserList from "./MessagesUsersList";
+import {usersCategories} from "../DummyData";
+import SwitchTab from "../Common/SwitchTab";
 
-const MessagesUsers = () => {
+const MessagesUsers = (props) => {
 
     const [active, setActive] = useState(0);
 
-    const activeChangeHandler = (index) => {
+    const activeMessageChangeHandler = (index) => {
         setActive(index);
-    }
+    };
 
 
     const users = usersList.map((item, index) =>
         <MessagesUserList
-            onClick={activeChangeHandler}
+            onClick={activeMessageChangeHandler}
             content={item}
             key={item.id}
             active={active}
             index={index}
-        />)
-
+            modalOpenHandler={props.modalOpenHandler}
+        />);
 
     return (
-        <div className={'messages-user-container'}>
-            <div className={'change-users'}>
-                <div>
-                    <span>Colleagues</span>
-                    <span>Patients</span>
-                </div>
-                <img src={plusIcon} alt='plus icon'/>
-            </div>
-            <div className={'user-list'}>
-                <Input
-                    className={'input-styles'}
-                    img={{
-                        src: searchIcon,
-                        alt: 'Search Icon',
-                        className: 'search-icon-one',
-                    }}
-                    input={{
-                        type: 'search',
-                        placeholder: 'Search in messages',
-                        className: 'search-input-one',
-                        id: 'message-search-input',
-                    }}
-                />
+        <div className={styles['messages-user-container']}>
+            <SwitchTab data={usersCategories}/>
+            <div className={styles['user-list']}>
                 {users}
             </div>
 
         </div>
-
     );
-
 }
 
 export default MessagesUsers

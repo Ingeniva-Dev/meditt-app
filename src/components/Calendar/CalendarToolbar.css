@@ -5,6 +5,21 @@
     margin-bottom: 24px;
 }
 
+.mobile-view {
+    background-color: #FFFFFF;
+    display: flex;
+    margin: 0 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(238, 237, 237, 1);
+    grid-gap: 10px;
+    justify-content: center;
+
+}
+
+.mobile-view > div {
+    max-width: 163px;
+}
+
 .date-ul {
     list-style: none;
     display: flex;
@@ -71,6 +86,37 @@
     max-height: 393px;
 }
 
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.schedule-change {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 34px;
+    font-size: 14px;
+    font-family: HelveticaBold, sans-serif;
+    line-height: 16px;
+    padding: 11px 28px;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    margin-right: 13px;
+
+}
+.backdrop {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 100vh;
+    cursor: default;
+}
+
+
 .weeks .nice-dates-day:after {
     border: none;
 }
@@ -129,67 +175,4 @@
     top: 20px;
     margin-top: 0;
     margin-left: -3px;
-}
-
-.right-side {
-    display: flex;
-    align-items: center;
-}
-
-.schedule-change {
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 34px;
-    font-size: 14px;
-    font-family: HelveticaBold, sans-serif;
-    line-height: 16px;
-    padding: 11px 28px;
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: repeat(2, max-content);
-    align-items: center;
-    margin-right: 13px;
-
-}
-
-.plus {
-    width: 38px;
-    height: 38px;
-    background-color: rgba(212, 74, 135, 1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 6px 0 rgba(33, 33, 33, 0.05);
-    cursor: pointer;
-}
-
-.plus > img {
-    max-width: 14px;
-}
-
-.backdrop {
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    height: 100vh;
-    cursor: default;
-}
-
-@media screen and (max-width: 767px) {
-    .toolbar-container {
-        flex-direction: column;
-    }
-
-    .left-side {
-        grid-template-columns: unset;
-        grid-gap: 10px;
-    }
-
-    .right-side {
-        margin-top: 10px;
-    }
-
 }
