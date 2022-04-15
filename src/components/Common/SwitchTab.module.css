@@ -7,7 +7,7 @@
     color: #838383;
     font-size: 14px;
     line-height: 20px;
-    border-bottom: 1px solid rgba(238, 237, 237, 1);
+    /*border-bottom: 1px solid rgba(238, 237, 237, 1);*/
     align-items: center;
 
 
@@ -31,10 +31,11 @@
     filter: invert(43%) sepia(34%) saturate(1641%) hue-rotate(290deg) brightness(88%) contrast(88%);
 }
 
-.input-styles {
-    display: block;
-    position: relative;
+.search-container {
+    margin: 0 auto;
+    max-width: 335px;
 }
+
 
 
 @media screen and (max-width: 767px) {
@@ -63,16 +64,5 @@
 
     }
 
-    .input-styles {
-        max-width: 335px;
-        margin: 0 auto;
-    }
-
-    .input-styles > input {
-        max-width: 100%;
-        background-color: rgba(245, 245, 245, 1);
-        border-radius: 63px;
-        margin: 0 auto;
-    }
 
 }

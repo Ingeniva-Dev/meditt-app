@@ -9,6 +9,7 @@ import {signUpStyle} from './../Modal/ModalStyles';
 import Sign from "../Modal/Sign";
 import Navigation from "../NavBar/Navigation";
 import MobileNavigation from "../NavBar/MobailNavigation";
+import Search from "../Common/Search";
 
 
 const Header = () => {
@@ -46,11 +47,8 @@ const Header = () => {
                 <div>
                     <span className={styles['logo']} onClick={signingChangeHandler}>Meditt*</span>
                     <div className={styles['border']}/>
-                    <div className={styles['search-input']}>
-                        <input id='search-input' type="search" placeholder='Search'/>
-                        <label htmlFor='search-input'>
-                            <img src={searchIcon} alt='Search Icon' className={styles['search-icon']}/>
-                        </label>
+                    <div className={styles['search-container']}>
+                        <Search main id='header-search-input'/>
                     </div>
                 </div>
                 <div>
@@ -70,6 +68,7 @@ const Header = () => {
                 isOpen={signingIsOpen}
                 onRequestClose={signingChangeHandler}
                 style={signUpStyle}
+                ariaHideApp={false}
             >
                 <Sign/>
             </Modal>

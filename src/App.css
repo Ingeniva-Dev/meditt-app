@@ -51,23 +51,23 @@
     padding: 13px 0 13px 14px;
 }
 
-.search-icon-one {
-    position: absolute;
-    top: calc(50%);
-    left: 10px;
-    max-width: 17.5px;
-    filter: invert(58%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(98%) contrast(93%);
-    transform: translateY(-50%);
-}
+/*.search-icon-one {*/
+/*    position: absolute;*/
+/*    top: calc(50%);*/
+/*    left: 10px;*/
+/*    max-width: 17.5px;*/
+/*    filter: invert(58%) sepia(0%) saturate(0%) hue-rotate(222deg) brightness(98%) contrast(93%);*/
+/*    transform: translateY(-50%);*/
+/*}*/
 
-.search-input-one {
-    padding: 11px 11px 11px 45px;
-    font-family: HelveticaRegular, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    max-width: 276px;
+/*.search-input-one {*/
+/*    padding: 11px 11px 11px 45px;*/
+/*    font-family: HelveticaRegular, sans-serif;*/
+/*    font-size: 14px;*/
+/*    line-height: 20px;*/
+/*    max-width: 276px;*/
 
-}
+/*}*/
 
 .active-header::after {
     content: '';

@@ -1,13 +1,16 @@
 import React, {useState} from "react";
 import styles from './SwitchTab.module.css';
 import plusIcon from "../../assets/Images/plusIcon.png";
-import Input from "../UI/Input";
-import searchIcon from "../../assets/Images/searchIcon.svg";
-
+import Search from './Search'
+import useViewport from "../../hooks/use-viewport";
 
 export default (props) => {
 
+
     const [activeUsers, setActiveUsers] = useState(0);
+    const {width} = useViewport();
+
+    const searchConfig = width < 768;
 
 
     const activeUsersChangeHandler = (index) => {
@@ -27,23 +30,11 @@ export default (props) => {
                 <div>
                     {userCategories}
                 </div>
-                <img src={plusIcon} alt='plus icon'/>
+                {props.plusBtn && <img src={plusIcon} alt='plus icon'/>}
             </div>
-            <Input
-                className={styles['input-styles']}
-                img={{
-                    src: searchIcon,
-                    alt: 'Search Icon',
-                    className: 'search-icon-one',
-                }}
-                input={{
-                    type: 'search',
-                    placeholder: 'Search in messages',
-                    className: 'search-input-one',
-                    id: 'message-search-input',
-                }}
-            />
-
+            <div className={styles['search-container']}>
+                <Search main={searchConfig} placeholder='Search in messages'/>
+            </div>
         </>
     )
 }

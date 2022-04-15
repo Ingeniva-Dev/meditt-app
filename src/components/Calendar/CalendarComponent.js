@@ -28,26 +28,10 @@ const localizer = dateFnsLocalizer({
 
 const CalendarComponent = () => {
 
-
+    const [month, setMonth] = useState(0);
     const context = useContext(Context);
     const {allEvents, view, onNavigateView, date, onNavigateDate} = context;
     const {width} = useViewport();
-
-
-    const {views, ...otherProps} = useMemo(() => ({
-        views: {
-            month: true,
-            week: true,
-            day: true,
-            agenda: AgendaView,
-        },
-    }), []);
-
-
-    const formats = {
-        weekdayFormat: 'EEEE',
-        dayFormat: (date, culture, localizer) => localizer.format(date, 'dd  EEEE', culture),
-    }
 
     useEffect(() => {
 
@@ -59,9 +43,29 @@ const CalendarComponent = () => {
 
     }, [width])
 
+    const {views, ...otherProps} = useMemo(() => ({
+        views: {
+            month: true,
+            week: true,
+            day: true,
+            agenda: AgendaView,
 
+        },
+        indexA: 'ssd',
+    }), []);
+
+
+    const formats = {
+        weekdayFormat: 'EEEE',
+        dayFormat: (date, culture, localizer) => localizer.format(date, 'dd  EEEE', culture),
+    }
+
+    const changeHandler = (val) => {
+        setMonth(val)
+    }
     return (
         <Calendar
+            monthIndex={+month}
             {...otherProps}
             date={date}
             onNavigate={onNavigateDate}
@@ -74,7 +78,10 @@ const CalendarComponent = () => {
             endAccesor="end"
             formats={formats}
             components={{
-                toolbar: CalendarToolbar,
+                toolbar: () => CalendarToolbar({
+                    changeHandler: changeHandler,
+                    monthIndex:month,
+                }),
             }}
         />
     );

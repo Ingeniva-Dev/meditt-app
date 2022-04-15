@@ -36,6 +36,7 @@ const Messages = () => {
                 onRequestClose={() => {
                     setMobileMessageIsOpen(false)
                 }}
+                ariaHideApp={false}
             >
                 <MobileMessages name={name} modalCloseHandler={modalOpenHandler}/>
             </Modal>}

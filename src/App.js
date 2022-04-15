@@ -4,6 +4,7 @@ import Header from "./components/Layout/Header";
 import Schedule from './pages/Schedule';
 import Messages from './pages/Messages';
 import Patients from './pages/Patients';
+import Patient from "./pages/Patient";
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
           <Route exact path='/patients' > 
             <Patients/>
           </Route>
+        <Route exact path='/selectedPatient' >
+            <Patient/>
+        </Route>
     </div>
  
   )

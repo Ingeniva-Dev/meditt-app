@@ -1,0 +1,60 @@
+.plan-exercises {
+    padding: 14px 17px;
+    border: 1px solid rgba(238, 237, 237, 1);
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 16px;
+
+}
+
+.name-img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-img-container > span {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(33, 33, 33, 1);
+}
+
+.name-img-container > div {
+    display: flex;
+    grid-gap: 20px;
+}
+
+.exercises-results-area {
+    display: flex;
+    grid-gap: 24px;
+}
+
+.exercises-results-area > div {
+    display: grid;
+    grid-gap: 12px;
+}
+.secondary-titles {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    color: rgba(33, 33, 33, 0.5);
+}
+.icon-box > img:first-child {
+    max-width: 14px;
+}
+
+.icon-box > img:last-child {
+    max-width: 18px;
+}
+
+.results-container {
+    display: flex;
+    grid-gap: 5px;
+    align-items: center;
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    color: rgba(33, 33, 33, 1);
+}
+

@@ -1,0 +1,28 @@
+
+.circle-svg {
+    display: block;
+    margin: auto;
+
+}
+
+.circle-background,
+.circle-progress {
+    fill: none;
+}
+
+.circle-background {
+    stroke: #EEEDED;
+}
+
+.circle-progress {
+    stroke: rgba(33, 33, 33, 1);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle-text {
+    font-family: HelveticaBold, sans-serif;
+    font-size: 36px;
+    line-height: 41px;
+    fill: rgba(33, 33, 33, 1);
+}

@@ -1,0 +1,64 @@
+.container {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 26px 24px;
+}
+
+.notes-area span {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(33, 33, 33, 1);
+}
+
+.title-container {
+    display: grid;
+    grid-template-columns: 20% 20% auto;
+    border-bottom: 1px solid rgba(238, 237, 237, 1);
+    margin-top: 28px;
+    grid-gap: 20px;
+    padding-bottom: 12px;
+}
+
+.title-container > span {
+    color: rgba(33, 33, 33, 0.5);
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-container > div {
+    max-width: 240px;
+}
+
+.search-container > img {
+    max-width: 14px;
+    filter: invert(45%) sepia(33%) saturate(1407%) hue-rotate(286deg) brightness(87%) contrast(91%);
+}
+
+
+.note {
+    display: grid;
+    grid-template-columns: 20% 20% auto;
+    padding: 24px 0;
+    grid-gap: 20px;
+    border-bottom: 1px solid rgba(238, 237, 237, 1);
+    align-items: center;
+}
+
+.note-text {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 20px;
+    align-items: center;
+
+}
+
+.note-text > img {
+    max-width: 16px;
+}
+.note-text > span {
+    max-inline-size: 850px;
+}

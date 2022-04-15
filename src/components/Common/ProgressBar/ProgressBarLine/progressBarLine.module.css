@@ -1,0 +1,19 @@
+.container-styles {
+    height: 12px;
+    width: 100%;
+    background-color: #e0e0de;
+    border-radius: 50px;
+}
+.filler-styles {
+
+    height: 100%;
+    /*width: `${completed}%`,*/
+    background-color:rgba(33, 33, 33, 1);
+    border-radius: inherit;
+    text-align: right;
+}
+.label-styles {
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+}

@@ -1,0 +1,59 @@
+
+.top-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-area > div {
+    display: flex;
+    align-items: center;
+    grid-gap: 18px;
+    max-width: 174px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.top-area span {
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(33, 33, 33, 1);
+}
+
+.top-area img {
+    max-width: 16px;
+}
+.nav-bar-container {
+    display: grid;
+    grid-template-columns: minmax(50%, auto ) max-content;
+    align-items: center;
+    margin-top: 48px;
+    justify-content: space-between;
+    grid-gap: 20px;
+}
+.next-appointment {
+    background-color: rgba(74, 113, 212, 1);
+    padding: 10px 12px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+}
+.next-appointment > span:first-child {
+    font-family: HelveticaBold, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.next-appointment > span:last-child{
+    font-family: HelveticaRegular, sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.about-patient-container {
+    padding: 24px 0;
+}

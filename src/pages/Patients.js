@@ -11,6 +11,7 @@ import useViewport from "../hooks/use-viewport";
 import SwitchTab from "../components/Common/SwitchTab";
 import {patientsCategories} from "../components/DummyData";
 import PlusBtn from "../components/Common/PlusBtn";
+import Search from "../components/Common/Search";
 
 const Patients = () => {
 
@@ -27,23 +28,14 @@ const Patients = () => {
         <Card>
             {width > 767 && <>
                 <div className={styles['button-container']}>
-                    <Button>New patient</Button>
+                    <div className={styles['btn-container']}>
+                        <Button>New patient</Button>
+                    </div>
                 </div>
                 <div className={styles['patients-container']}>
-                    <Input
-                        className={styles['input-style']}
-                        img={{
-                            src: searchIcon,
-                            alt: 'Search Icon',
-                            className: 'search-icon-one',
-                        }}
-                        input={{
-                            type: 'search',
-                            placeholder: 'Search in patients',
-                            className: 'search-input-one',
-                            id: 'patients-search-input',
-                        }}
-                    />
+                    <div className={styles['search-container']}>
+                        <Search/>
+                    </div>
                     <div className={styles['patients-info-categories']}>
                     <span>
                         Patient Name
@@ -57,7 +49,7 @@ const Patients = () => {
                 </div>
             </>}
             {width < 768 && <div className={styles['mobile-container']}>
-                <SwitchTab data={patientsCategories}/>
+                <SwitchTab plusBtn data={patientsCategories}/>
                 <PlusBtn/>
                 <div>
                     {patientsListJSX}

@@ -1,0 +1,20 @@
+.main-container {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 26px 24px 26px 0;
+}
+
+.switch-tab-container {
+    max-width: 300px;
+    padding: 24px 24px 0;
+
+}
+
+.middle-section {
+    display: grid;
+    grid-template-columns: 15% 20% 33% auto;
+    margin-top: 16px;
+
+}
+
+/*231*/

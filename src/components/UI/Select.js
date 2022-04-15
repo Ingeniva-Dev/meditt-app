@@ -30,7 +30,7 @@ const Select = (props) => {
 
     const options = props.optionData && props.optionData.map((item, index) => <option
     key={index}
-    value={item.text}
+    value={item.value || item.text}
     >
         {item.text}
     </option>);
@@ -44,7 +44,7 @@ const Select = (props) => {
                     {...props.select}
                     required
                 >
-                    <option value="" disabled selected> {props.placeholder}</option>
+                        <option value="" disabled selected> {props.placeholder}</option>
                     {options}
                 </select>}
             {props.createNew && <span className='create-new'>+ Create new patient</span>}

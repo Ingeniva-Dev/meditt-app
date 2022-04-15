@@ -25,7 +25,7 @@ const useSelect = (validateValue) => {
     const valueIsValid = validateValue(selectState.value);
 
     const valueChangeHandler = (event) => {
-        dispatch({type: 'SELECT', value: event.target.value});
+         dispatch({type: 'SELECT', value: event.target.value});
     }
     const datePikerChangeHandler = (date) => {
         dispatch({type: 'DATE_PIKER', value: date});

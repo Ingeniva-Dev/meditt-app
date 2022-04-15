@@ -16,10 +16,13 @@
     grid-gap: 10px;
     word-break: break-word;
 }
+.search-container {
+    max-width: 240px;
+}
 
-.input-style {
-    display: block;
-    position: relative;
+.btn-container {
+    max-width: 174px;
+    width: 100%;
 }
 
 .button-container {

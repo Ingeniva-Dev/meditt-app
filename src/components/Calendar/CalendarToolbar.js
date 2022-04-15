@@ -11,14 +11,13 @@ import {enGB} from 'date-fns/locale'
 import {Calendar} from 'react-nice-dates'
 import 'react-nice-dates/build/style.css'
 import getWeek from 'date-fns/getWeek'
-import {patientSelect, toolbarLi} from "../DummyData";
+import {months, patientSelect, toolbarLi} from "../DummyData";
 import Ul from "../UI/Ul";
 import Select from "../UI/Select";
 import useViewport from "../../hooks/use-viewport";
 import PlusBtn from "../Common/PlusBtn";
 
-
-const CalendarToolbar = () => {
+const CalendarToolbar = (props) => {
 
     const [bookingIsOpen, setBookingIsOpen] = useState(false);
     const [calendarIsOpen, setCalendarIsOpen] = useState(false);
@@ -87,7 +86,15 @@ const CalendarToolbar = () => {
             {width < 768 && <div className={'mobile-view'}>
                 <Select
                     placeholder='September'
-                    optionData={patientSelect}/>
+                    optionData={months}
+                    select={{
+                        onChange: (event) => {
+                            props.changeHandler(event.target.value);
+                        },
+                        value: props.monthIndex
+                    }}
+                />
+
                 <Select
                     placeholder='My Schedule'
                     optionData={patientSelect}/>

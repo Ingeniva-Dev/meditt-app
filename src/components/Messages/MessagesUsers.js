@@ -26,7 +26,7 @@ const MessagesUsers = (props) => {
 
     return (
         <div className={styles['messages-user-container']}>
-            <SwitchTab data={usersCategories}/>
+            <SwitchTab plusBtn data={usersCategories}/>
             <div className={styles['user-list']}>
                 {users}
             </div>

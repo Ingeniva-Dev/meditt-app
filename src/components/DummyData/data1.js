@@ -1,6 +1,26 @@
 import userImg from './../../assets/Images/userImg.png';
 import React from "react";
 
+export const patientNav = [
+    {
+        title:'Notes',
+    },
+    {
+        title:'Details',
+    },
+    {
+        title:'Treatment',
+    },
+    {
+        title:'Progress',
+    },
+    {
+        title:'Appointments',
+    },
+
+
+]
+
 
 const locationSelect = [
     {
@@ -33,6 +53,58 @@ const practitionerSelect = [
     },
 
 ];
+
+export const months = [
+    {
+        text:'January',
+        value:'0',
+    },
+    {
+        text:'February',
+        value:'1',
+    },
+    {
+        text:'March',
+        value:'2',
+    },
+    {
+        text:'April',
+        value:'3',
+    },
+    {
+        text:'May',
+        value:'4',
+    },
+    {
+        text:'June',
+        value:'5',
+    },
+    {
+        text:'July',
+        value:'6',
+    },
+    {
+        text:'August',
+        value:'7',
+    },
+    {
+        text:'September',
+        value:'8',
+    },
+    {
+        text:'October',
+        value:'9',
+    },
+    {
+        text:'November',
+        value:'10',
+    },
+    {
+        text:'December',
+        value:'11',
+    },
+
+]
 
 const patientSelect = [
     {
@@ -773,74 +845,866 @@ const patientsLIst = [
     {
         name: 'Jan Olav Hesdfsdfsdfldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+        ],
+
     },
     {
         name: 'Jan Olav Heldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+
+        ],
     },
     {
         name: 'Jan Olav Heldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldafsdfsdl',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldafdsfsdl',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldal',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldalsdfsfsdf',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldalfdsfsd',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        notes:[
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Kjetil Geir Sundby',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+            {
+                date:'01-10-2021',
+                practitioner:'Lydia Madsen',
+                note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+            },
+        ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+        ],
     },
     {
         name: 'Jan Olav Heldafdl',
         birthDate: 'September 19 1982',
+        address:'Konows Carl Gate 13, 5162 Bergen',
         phoneNumber: '+47 99 58 47 48',
         email: 'name.longname@email.com',
+        communication:'Via email',
+        SSN:'15445498-2541',
+        insured:'Yes, Tryg Insurance',
+        weight:'72kg',
+        height:'175cm',
+        BMI:'23,5',
+        otherNotes:'Wheelchair user, diabetes, blind',
+        // notes:[
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Lydia Madsen',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+        //     },
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Kjetil Geir Sundby',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget.',
+        //
+        //     },
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Lydia Madsen',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla.',
+        //     },
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Lydia Madsen',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+        //     },
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Lydia Madsen',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+        //     },
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Lydia Madsen',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+        //     },
+        //     {
+        //         date:'01-10-2021',
+        //         practitioner:'Lydia Madsen',
+        //         note:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. Quam integer id viverra at suspendisse quam eget neque amet. Lectus in sapien posuere lacus, dictum.',
+        //     },
+        // ],
+        appointments:[
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Online',
+                practitioner:'Kjetil Geir Sundby',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+            {
+                date: '01-10-2021',
+                time:'11.30 - 12.30',
+                location:'Blue Room',
+                practitioner:'Lydia Madsen',
+                comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra, placerat tellus morbi in vitae a, nulla. Netus enim ultricies lorem vitae, adipiscing eget eget. ',
+            },
+        ],
     },
 
 ];
